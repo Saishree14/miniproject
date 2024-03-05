@@ -6,17 +6,16 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="demand")
-public class demandModel {
+public class DemandModel {
     
     @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int dem_id;
-    private String project_name;
-    private String mgr_name;
+    private String projectname;
+    private String manager;
     private String level;
     private String city;
     private String skills;
-    private String status;
     private double duration;
     private String startDate;
     private String demand_status;

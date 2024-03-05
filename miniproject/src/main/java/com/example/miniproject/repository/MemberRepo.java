@@ -3,9 +3,9 @@ package com.example.miniproject.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.miniproject.model.memberModel;
+import com.example.miniproject.model.MemberModel;
 
 @Repository
-public interface memberRepo extends JpaRepository<memberModel,Integer> {
+public interface MemberRepo extends JpaRepository<MemberModel,Integer> {
     
 }

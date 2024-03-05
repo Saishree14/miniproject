@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="member")
-public class memberModel{
+public class MemberModel {
     
     @jakarta.persistence.Id
     @GeneratedValue(strategy =GenerationType.AUTO)
