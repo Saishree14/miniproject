@@ -24,12 +24,22 @@ public class DemandController {
     }
 
     @GetMapping("/getDemandByCity")
-    public List<DemandModel> getDemandCity(@RequestParam(required = true) String city) {
+    public List<DemandModel> getDemandCity(@RequestParam String city) {
             return demandservice.getDemandsbyCity(city);
     }
 
-    @GetMapping("/getDemandByManager")
-    public List<DemandModel> getDemandManager(@RequestParam(required = true) String manager) {
-      return demandservice.getDemandsbyManager(manager);
+    @GetMapping("/getDemandByLevel")
+    public List<DemandModel> getDemandLevel(@RequestParam String level) {
+        return demandservice.getDemandsbyLevel(level);
+   }
+
+   @GetMapping("/getDemandByMgrorProj")
+    public List<DemandModel> getDemandMgrorProj(@RequestParam(required = false) String mgr_name,@RequestParam(required = false) String proj_name){
+        return demandservice.getDemandbyManagerorProject(mgr_name,proj_name);
+   }
+
+   @GetMapping("/getDemandByStatus")
+   public List<DemandModel> getDemandStatus(@RequestParam String status){
+        return demandservice.getDemandByStatus(status);
    }
 }

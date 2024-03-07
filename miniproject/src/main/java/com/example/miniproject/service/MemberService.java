@@ -17,4 +17,8 @@ public class MemberService {
     public List<MemberModel> getMembers() {
         return memberrepo.findAll();
     }
+
+    public List<Integer>getMemberId(){
+        return memberrepo.findMember();
+    }
 }

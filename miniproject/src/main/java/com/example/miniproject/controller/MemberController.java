@@ -22,4 +22,7 @@ public class MemberController {
     public List<MemberModel> getAll() {
         return memberservice.getMembers();
     }
+
+    @GetMapping("/getMember")
+    public List<Integer> getMember(){return memberservice.getMemberId();}
 }

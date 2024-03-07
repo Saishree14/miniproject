@@ -24,8 +24,16 @@ public class DemandService {
         return demandrepo.findByCity(city);
     }
 
-    public List<DemandModel> getDemandsbyManager(String manager){
-       return demandrepo.findByManager(manager);
+    public List<DemandModel> getDemandsbyLevel(String level){
+        return demandrepo.findByLevel(level);
+   }
+
+   public List<DemandModel> getDemandbyManagerorProject(String mgr_name,String proj_name){
+        return demandrepo.findByMgrorProj(mgr_name,proj_name);
+   }
+
+   public List<DemandModel> getDemandByStatus(String status){
+        return demandrepo.findByStatus(status);
    }
 
 }
